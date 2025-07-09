@@ -2,14 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
-Route::get('/base', function () {
-    return view('base');
-});
 
-Route::get('/third', function () {
-    return view('third'); // <-- third.blade.php file doesn't exist
-});
+Route::view('/base', 'base');
+
+Route::view('/third', 'third');
