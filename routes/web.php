@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\HomeController;
 
-Route::view('/', function() {
-    $categories = DB::table('categories')->get();
-    return view('home', ['categories'=> $categories]);
-
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home'); 
 
 Route::view('/about', 'about')->name('about');
 
