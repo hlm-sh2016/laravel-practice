@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome');
+Route::view('/', 'home');
 
 
-Route::view('/base', 'base');
+Route::view('/about', 'about');
 
-Route::view('/third', 'third');
+Route::view('/contact', 'contact');
